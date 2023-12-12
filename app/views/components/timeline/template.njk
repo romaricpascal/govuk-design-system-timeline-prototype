@@ -2,7 +2,13 @@
   <ol class="hmrc-timeline">
     {% for event in params.events -%}
       <li class="hmrc-timeline__event">
-        <{% if params.headingLevel %}h{{- params.headingLevel | string | trim -}}{% else %}h2{% endif %} class="hmrc-timeline__event-title">{{ event.title }}</{% if params.headingLevel %}h{{- params.headingLevel | string | trim -}}{% else %}h2{% endif %}>
+        <{% if params.headingLevel %}h{{- params.headingLevel | string | trim -}}{% else %}h2{% endif %} class="hmrc-timeline__event-title">
+          {% if event.url %}
+            <a href="{{event.url}}">{{event.title}}</a>
+          {% else %}
+            {{ event.title }}
+          {% endif %}
+        </{% if params.headingLevel %}h{{- params.headingLevel | string | trim -}}{% else %}h2{% endif %}>
         <time class="hmrc-timeline__event-meta" {% if event.datetime %}datetime="{{event.datetime}}"{% endif %}>{{ event.time }}</time>
         <div class="hmrc-timeline__event-content">
           {{ event.content | safe }}

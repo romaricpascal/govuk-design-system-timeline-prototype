@@ -1,0 +1,22 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Release" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <time datetime="{{release.datetime}}" class="govuk-caption-xl">{{release.time}}</time>
+    <h1 class="govuk-heading-xl">
+      {{release.title}}
+    </h1>
+
+    {{ appTimeline({
+      headingLevel: "2",
+      events: release.children
+    }) }}
+  </div>
+</div>
+
+{% endblock %}

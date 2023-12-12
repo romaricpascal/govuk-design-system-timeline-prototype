@@ -31,6 +31,7 @@ router.use((req, res, next) => {
       datetime: githubRelease.created_at,
       time: formattedReleaseDate,
       version: githubRelease.tag_name,
+      url: `/release?version=${githubRelease.tag_name}`,
       // Extra metadata for rendering or filtering in the view
       parent,
       
@@ -46,6 +47,15 @@ router.use((req, res, next) => {
     release.content = release.children ? release.children.map(child => child.version).join(', ') : 'No children'
   })
 
+  res.locals.releasesByVersion = index(res.locals.releases, {by: 'version'})
+
+  next();
+})
+
+router.get('/release', (req, res, next) => {
+
+  res.locals.release = res.locals.releasesByVersion[req.query.version][0];
+  
   next();
 })
 
