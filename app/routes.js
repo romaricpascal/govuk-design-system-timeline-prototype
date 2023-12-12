@@ -30,16 +30,41 @@ router.use((req, res, next) => {
       title: `Released ${githubRelease.name}`,
       datetime: githubRelease.created_at,
       time: formattedReleaseDate,
-      content: parent ?? 'No parent',
+      version: githubRelease.tag_name,
       // Extra metadata for rendering or filtering in the view
       parent,
+      
     }
 
     return release;
   })
 
+  const releasesIndexedByParent = index(res.locals.releases, {by: 'parent'});
+
+  res.locals.releases.forEach(release => {
+    release.children = releasesIndexedByParent[release.version] 
+    release.content = release.children ? release.children.map(child => child.version).join(', ') : 'No children'
+  })
+
   next();
 })
+
+function index(list, {by:property}) {
+  const index = {};
+
+  list.forEach(item => {
+
+    const value = item[property];
+
+    if (!index[value]) {
+      index[value] = []
+    }
+
+    index[value].push(item)
+  })
+  
+  return index;
+}
 
 function getReleaseParent(release) {
   const [versionNumber,preReleaseVersionNumber] = release.tag_name.split('-');
