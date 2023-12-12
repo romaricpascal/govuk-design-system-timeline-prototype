@@ -4,18 +4,78 @@
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-xl">
-      {{ serviceName }}
-    </h1>
+<h1 class="govuk-heading-xl">
+  {{ serviceName }}
+</h1>
+
+
+<div class="moj-filter-layout">
+
+  <div class="moj-filter-layout__filter">
+
+    {{ mojFilter({
+      heading: {
+        text: 'Filter'
+      },
+      selectedFilters: {
+
+        heading: {
+          text: 'Selected filters'
+        },
+
+        clearLink: {
+          text: 'Clear filters'
+        },
+
+        categories: [
+          {
+            heading: {
+              text: 'TODO'
+            },
+            items: [{
+              href: '#',
+              text: 'Render active filters'
+            }]
+          }
+        ]
+      },
+      optionsHtml: '<p><strong>TODO</strong>: Render the filter form</p>'
+    }) }}
+
+  </div>
+  <div class="moj-filter-layout__content">
+
+    <div class="app-filter-toggle-wrapper"></div>
 
     {{ appTimeline({
       headingLevel: "2",
       events: allEvents | rejectattr('parent') | sort(false, false, 'datetime')
     }) }}
-  </div>
+    </div>
 </div>
 
+{% endblock %}
+
+{% block pageScripts %}
+  <script>
+    new MOJFrontend.FilterToggleButton({
+      bigModeMediaQuery: "(min-width: 48.063em)",
+      startHidden: true,
+      toggleButton: {
+        container: $(".app-filter-toggle-wrapper"),
+        showText: "Show filter",
+        hideText: "Hide filter",
+        classes: "govuk-button--secondary",
+      },
+      closeButton: {
+        container: $(".moj-filter__header-action"),
+        text: "Close",
+      },
+      filter: {
+        container: $(".moj-filter"),
+      },
+    });
+
+  </script>
 {% endblock %}
