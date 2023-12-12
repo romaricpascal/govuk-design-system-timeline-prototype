@@ -13,7 +13,7 @@
 
     {{ appTimeline({
       headingLevel: "2",
-      events: releaseEvents
+      events: releases | rejectattr('parent')
     }) }}
   </div>
 </div>

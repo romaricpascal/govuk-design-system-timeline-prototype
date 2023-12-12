@@ -15,18 +15,45 @@ const DATE_FORMAT = new Intl.DateTimeFormat(
   }
 )
 
+
+
 // Add your routes here
 router.use((req, res, next) => {
+  const releasesByParent = {};
+
   const githubReleases = require('./data/github-releases.json');
+  
+  res.locals.releases = githubReleases.map(githubRelease => {
 
-  const releaseEvents = githubReleases.map(release => ({
-    title: `Released ${release.name}`,
-    datetime: release.created_at,
-    time: DATE_FORMAT.format(new Date(release.created_at)),
-    content: '<p class="govuk-body">We released a new version of GOV.UK Frontend</p>'
-  }));
+    const formattedReleaseDate = DATE_FORMAT.format(new Date(githubRelease.created_at));
+    const parent = getReleaseParent(githubRelease);
 
-  res.locals.releaseEvents = releaseEvents;
+    const release = {
+      title: `Released ${githubRelease.name}`,
+      datetime: githubRelease.created_at,
+      time: formattedReleaseDate,
+      content: '',
+      // Extra metadata for rendering or filtering in the view
+      parent,
+    }
+    
+    return release;
+  })
 
   next();
 })
+
+function getReleaseParent(release) {
+  const [versionNumber,preReleaseVersionNumber] = release.tag_name.split('-');
+  if (preReleaseVersionNumber){
+    return versionNumber;
+  }
+
+  const [major, minor, patch] = versionNumber.split('.');
+  if (patch !== '0') {
+    return [major, minor, 0].join('.')
+  }
+  if (minor !== '0') {
+    return [major, 0, 0].join('.')
+  }
+}
