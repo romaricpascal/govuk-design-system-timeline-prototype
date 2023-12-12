@@ -13,7 +13,7 @@
 
     {{ appTimeline({
       headingLevel: "2",
-      events: releases | rejectattr('parent')
+      events: allEvents | rejectattr('parent') | sort(false, false, 'datetime')
     }) }}
   </div>
 </div>
