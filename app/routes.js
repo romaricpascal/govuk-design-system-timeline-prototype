@@ -19,8 +19,6 @@ const DATE_FORMAT = new Intl.DateTimeFormat(
 
 // Add your routes here
 router.use((req, res, next) => {
-  const releasesByParent = {};
-
   const githubReleases = require('./data/github-releases.json');
   
   res.locals.releases = githubReleases.map(githubRelease => {
@@ -32,11 +30,11 @@ router.use((req, res, next) => {
       title: `Released ${githubRelease.name}`,
       datetime: githubRelease.created_at,
       time: formattedReleaseDate,
-      content: '',
+      content: parent ?? 'No parent',
       // Extra metadata for rendering or filtering in the view
       parent,
     }
-    
+
     return release;
   })
 
@@ -45,11 +43,15 @@ router.use((req, res, next) => {
 
 function getReleaseParent(release) {
   const [versionNumber,preReleaseVersionNumber] = release.tag_name.split('-');
+  const [major, minor, patch] = versionNumber.split('.');
   if (preReleaseVersionNumber){
+    if (major == 'v0') {
+      return 'v1.0.0';
+    }
     return versionNumber;
   }
 
-  const [major, minor, patch] = versionNumber.split('.');
+  
   if (patch !== '0') {
     return [major, minor, 0].join('.')
   }
