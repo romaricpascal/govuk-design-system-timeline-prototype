@@ -22,7 +22,7 @@ module.exports = {
 
       const release = {
         // Data expected by the component
-        title: `Released ${githubRelease.name}`,
+        title: `We released ${githubRelease.name}`,
         datetime: githubRelease.created_at,
         time: formattedReleaseDate,
         url: `/release?version=${githubRelease.tag_name}`,

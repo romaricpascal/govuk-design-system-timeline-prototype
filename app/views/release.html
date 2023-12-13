@@ -12,10 +12,13 @@
       {{release.title}}
     </h1>
 
-    {{ appTimeline({
-      headingLevel: "2",
-      events: release.children
-    }) }}
+    {% if release.children %}
+      <h2 class="govuk-heading-l">Timeline</h2>
+      {{ appTimeline({
+        headingLevel: "2",
+        events: release.children
+      }) }}
+    {% endif %}
   </div>
 </div>
 
