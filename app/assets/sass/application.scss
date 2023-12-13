@@ -9,14 +9,30 @@
     @include govuk-font($size: 16);
 }
 
+.hmrc-timeline {
+    border-left: 0;
+}
+
+.hmrc-timeline__event {
+    border-left: 5px solid govuk-colour('black');
+}
+
+.hmrc-timeline__event-title:before {
+    background-color: govuk-colour('black');
+}
+
 .app-phases {
     .app-event {
-        visibility: hidden;
+        .hmrc-timeline__event-title, .hmrc-timeline__event-meta, .hmrc-timeline__event-content {
+            visibility: hidden;
+        }
     }
 }
 
 .app-events {
     .app-phase {
-        visibility: hidden;
+        .hmrc-timeline__event-title, .hmrc-timeline__event-meta, .hmrc-timeline__event-content {
+            visibility: hidden;
+        }
     }
 }
