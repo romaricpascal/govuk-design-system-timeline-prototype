@@ -55,6 +55,12 @@
     ]
   },
   {
+    "title": "Design System Day 2022",
+    "datetime": "2022-11-15",
+    "id": "dsday2022",
+    "content": "Design System Day is aimed at people who frequently use design systems and teams who build and manage design systems. We' are interested to learn and hear about the challenges of working with a design system from both the public and private sectors as well as other international government design systems."
+  },
+  {
     "title": "We released GOV.UK Frontend version 5.0.0",
     "datetime": "2023-12-08",
     "id": "5.0.0"

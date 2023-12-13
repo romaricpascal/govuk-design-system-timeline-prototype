@@ -18,7 +18,7 @@ module.exports = {
         ...generalEvent,
         time: DATE_FORMAT.format(new Date(generalEvent.datetime)),
         classes: 'app-event',
-        url: generalEvent.events ? `/release?version=${generalEvent.id}` : `event/${generalEvent.id}`
+        url: generalEvent.events ? `/release?version=${generalEvent.id}` : `event?id=${generalEvent.id}`
       }
     })
 

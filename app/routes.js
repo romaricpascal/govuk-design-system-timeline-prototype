@@ -34,3 +34,9 @@ router.get('/release', (req, res, next) => {
 
   next();
 })
+
+router.get('/event', (req, res, next) => {
+  res.locals.event = res.locals.allEvents.filter(event => event.id == req.query.id)[0];
+
+  next();
+})

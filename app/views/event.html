@@ -1,0 +1,18 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Event" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <time datetime="{{event.datetime}}" class="govuk-caption-xl">{{event.time}}</time>
+    <h1 class="govuk-heading-xl">
+      {{event.title}}
+    </h1>
+
+    <p class="govuk-body">{{ event.content | safe }}</p>
+  </div>
+</div>
+
+{% endblock %}
