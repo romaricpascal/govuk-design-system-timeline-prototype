@@ -8,6 +8,7 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 const { getGitHubReleasesEvents } = require('./data/sources/github-releases.js');
 const { getEvents } = require('./data/sources/events.js');
+const {DATE_FORMAT} = require('./data/sources/util/date.js');
 
 // Add your routes here
 router.use((req,res,next) => {
@@ -22,7 +23,14 @@ router.use((req,res,next) => {
 })
 
 router.get('/release', (req, res, next) => {
-  res.locals.release = res.locals.allEvents.filter(event => event.id == req.query.version)[0];
+  let release = res.locals.allEvents.filter(event => event.id == req.query.version)[0]
+  release.events = release.events.map(event => {
+    return {
+      ...event,
+      time: DATE_FORMAT.format(new Date(event.datetime))
+    }
+  })
+  res.locals.release = release;
 
   next();
 })
