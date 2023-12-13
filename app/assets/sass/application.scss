@@ -9,3 +9,14 @@
     @include govuk-font($size: 16);
 }
 
+.app-releases {
+    .app-event {
+        visibility: hidden;
+    }
+}
+
+.app-events {
+    .app-release {
+        visibility: hidden;
+    }
+}

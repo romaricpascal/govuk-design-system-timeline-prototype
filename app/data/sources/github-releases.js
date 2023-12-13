@@ -28,7 +28,8 @@ module.exports = {
         url: `/release?version=${githubRelease.tag_name}`,
         // Extra metadata for rendering or filtering in the view
         parent,
-        version: githubRelease.tag_name
+        version: githubRelease.tag_name,
+        classes: 'app-release'
       }
 
       return release;

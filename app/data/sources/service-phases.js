@@ -7,7 +7,8 @@ module.exports = {
     const servicePhasesEvents = servicePhases.map(servicePhase => {
       return {
         ...servicePhase,
-        time: DATE_FORMAT.format(new Date(servicePhase.datetime))
+        time: DATE_FORMAT.format(new Date(servicePhase.datetime)),
+        classes: 'app-event'
       }
     })
 
