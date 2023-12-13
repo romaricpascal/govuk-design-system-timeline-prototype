@@ -51,6 +51,14 @@
       {
         "title": "Exit This Page component",
         "datetime": "2023-07-06"
+      },
+      {
+        "title": "Launched GOV.UK Frontend 4.6.0",
+        "datetime": "2023-04-20"
+      },
+      {
+        "title": "Pagination component",
+        "datetime": "2023-04-20"
       }
     ]
   },
@@ -63,6 +71,12 @@
   {
     "title": "We released GOV.UK Frontend version 5.0.0",
     "datetime": "2023-12-08",
-    "id": "5.0.0"
+    "id": "5.0.0",
+    "events": [
+      {
+        "title": "Exit This Page component",
+        "datetime": "2023-07-06"
+      }
+    ]
   }
 ]
