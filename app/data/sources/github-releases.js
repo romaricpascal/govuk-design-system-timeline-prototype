@@ -29,6 +29,8 @@ module.exports = {
         // Extra metadata for rendering or filtering in the view
         parent,
         version: githubRelease.tag_name,
+        blurb: githubRelease.blurb,
+        notes: githubRelease.html_url,
         classes: 'app-release'
       }
 
