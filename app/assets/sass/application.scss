@@ -4,3 +4,8 @@
 // 
 
 // Add extra styles here
+
+.hmrc-timeline__event-content {
+    @include govuk-font($size: 16);
+}
+
