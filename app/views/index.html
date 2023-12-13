@@ -4,12 +4,6 @@
 
 {% block content %}
 
-
-<h1 class="govuk-heading-xl">
-  {{ serviceName }}
-</h1>
-
-
 <div class="moj-filter-layout">
 
   <div class="moj-filter-layout__filter">
@@ -51,13 +45,13 @@
 </div>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half app-events">
+  <div class="govuk-grid-column-one-half app-phases">
     {{ appTimeline({
       headingLevel: "2",
       events: allEvents | rejectattr('parent') | sort(false, false, 'datetime')
     }) }}
   </div>
-  <div class="govuk-grid-column-one-half app-releases">
+  <div class="govuk-grid-column-one-half app-events">
     {{ appTimeline({
       headingLevel: "2",
       events: allEvents | rejectattr('parent') | sort(false, false, 'datetime')

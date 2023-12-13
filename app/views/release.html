@@ -12,16 +12,10 @@
       {{release.title}}
     </h1>
 
-    {% if release.children %}
-      <h2 class="govuk-heading-l">Timeline</h2>
-      {{ appTimeline({
-        headingLevel: "2",
-        events: release.children
-      }) }}
-    {% else %}
-      {{ release.blurb | safe }}
-      <p class="govuk-body">Read <a href="{{ release.notes }}" class="govuk-link">the release notes for this release in github</a> for more info.</p>
-    {% endif %}
+    {{ appTimeline({
+      headingLevel: "2",
+      events: release.events
+    }) }}
   </div>
 </div>
 
