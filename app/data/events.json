@@ -53,14 +53,75 @@
         "datetime": "2023-07-06"
       },
       {
+        "title": "Launched GOV.UK Frontend 4.7.0",
+        "datetime": "2023-07-06"
+      },
+      {
         "title": "Launched GOV.UK Frontend 4.6.0",
         "datetime": "2023-04-20"
       },
       {
+        "title": "Launched GOV.UK Frontend 4.5.0",
+        "datetime": "2023-01-31"
+      },
+      {
+        "title": "Summary card component",
+        "datetime": "2023-01-31"
+      },
+      {
+        "title": "Launched GOV.UK Frontend 4.4.1",
+        "datetime": "2022-12-16"
+      },
+      {
+        "title": "Launched GOV.UK Frontend 4.4.0",
+        "datetime": "2022-11-14"
+      },
+      {
+        "title": "Internationalisation",
+        "datetime": "2022-11-14"
+      },
+      {
+        "title": "Launched GOV.UK Frontend 4.3.1",
+        "datetime": "2022-08-18"
+      },
+      {
+        "title": "Launched GOV.UK Frontend 4.3.0",
+        "datetime": "2022-08-09"
+      },
+      {
+        "title": "Launched GOV.UK Frontend 4.2.0",
+        "datetime": "2022-06-27"
+      },
+      {
         "title": "Pagination component",
-        "datetime": "2023-04-20"
+        "datetime": "2022-06-27"
+      },
+      {
+        "title": "Launched GOV.UK Frontend 4.1.0",
+        "datetime": "2022-05-01"
+      },
+      {
+        "title": "Character count component updated",
+        "datetime": "2022-05-01"
+      },
+      {
+        "title": "Addresses pattern updated",
+        "datetime": "2022-04-28"
+      },
+      {
+        "title": "Help users to confirm a phone number pattern",
+        "datetime": "2022-03-31"
+      },
+      {
+        "title": "Launched GOV.UK Frontend 4.0.1",
+        "datetime": "2022-02-08"
+      },
+      {
+        "title": "Accordion component updated",
+        "datetime": "2022-02-08"
       }
     ]
+
   },
   {
     "title": "Design System Day 2022",
@@ -74,8 +135,16 @@
     "id": "5.0.0",
     "events": [
       {
-        "title": "Exit This Page component",
-        "datetime": "2023-07-06"
+        "title": "Task list component",
+        "datetime": "2023-12-08"
+      },
+      {
+        "title": "Tag component updated",
+        "datetime": "2023-12-08"
+      },
+      {
+        "title": "Removed support for IE 11 and other older browsers running unsupported JavaScript",
+        "datetime": "2023-12-08"
       }
     ]
   }
