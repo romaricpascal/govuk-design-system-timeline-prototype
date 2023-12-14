@@ -21,18 +21,56 @@
     background-color: govuk-colour('black');
 }
 
-.app-phases {
-    .app-event {
-        .hmrc-timeline__event-title, .hmrc-timeline__event-meta, .hmrc-timeline__event-content {
-            visibility: hidden;
-        }
+.app-main-timeline {
+    .hmrc-timeline {
+        display: grid;
+        grid-template-columns: auto 2fr;
+        list-style-type: none;
+        background-image: linear-gradient(govuk-colour('black'), govuk-colour('black'));
+        background-repeat: no-repeat;
+        background-size: 5px 100%;
     }
-}
 
-.app-events {
     .app-phase {
-        .hmrc-timeline__event-title, .hmrc-timeline__event-meta, .hmrc-timeline__event-content {
-            visibility: hidden;
-        }
+        grid-column: 1;
+        border-bottom: solid 5px;
+        padding-block: 30px;
+    }
+
+    .app-phase h2 {
+        position: relative;
+    }
+
+    .app-phase h2::before {
+        left: -15px;
+    }
+
+    .app-phase time {
+        margin-bottom: 0;
+    }
+
+    .app-phase:first-child {
+        padding-top: 0;
+    }
+
+    .app-phase:not(:first-child) {
+        border-top: solid 5px;
+    }
+
+    .app-phase-placeholder {
+        grid-column: 2;
+        background-image: linear-gradient(govuk-colour('black'), govuk-colour('black'));
+        background-size: 5px 5px;
+        background-repeat: no-repeat;
+        background-position: bottom left;
+    }
+
+    .app-phase-placeholder:not(:nth-child(2)) {
+        background-image: linear-gradient(govuk-colour('black'), govuk-colour('black')), linear-gradient(govuk-colour('black'), govuk-colour('black'));
+        background-position: bottom left, top left;
+    }
+
+    .app-event {
+        grid-column: 2;
     }
 }

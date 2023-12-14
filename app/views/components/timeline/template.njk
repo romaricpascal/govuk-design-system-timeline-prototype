@@ -14,6 +14,9 @@
           {{ event.content | safe }}
         </div>
       </li>
+      {% if (event.type == 'phase') %}
+        <li role="presentation" class="app-phase-placeholder"></li>
+      {% endif %}
     {%- endfor %}
   </ol>
 {% endif %}
