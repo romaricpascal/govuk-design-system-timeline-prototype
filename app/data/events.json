@@ -7,8 +7,76 @@
       {
         "title": "Footer component",
         "datetime": "2018-03-08"
+      },
+      {
+        "title": "Header component",
+        "datetime": "2018-05-29"
+      },
+      {
+        "title": "Details component",
+        "datetime": "2018-07-17"
+      },
+      {
+        "title": "Error component",
+        "datetime": "2018-03-08"
+      },
+      {
+        "title": "Warning text component",
+        "datetime": "2018-06-14"
+      },
+      {
+        "title": "Table component",
+        "datetime": "2018-04-12"
+      },
+      {
+        "title": "Conditional reveal functionality added to checkboxes and radios",
+        "datetime": "2018-05-18"
+      },
+      {
+        "title": "Inset text component",
+        "datetime": "2018-05-29"
       }
     ]
+  },
+  {
+    "title": "We add the layout page",
+    "datetime": "2018-01-09",
+    "id": "layout"
+  },
+  {
+    "title": "We add the colours page",
+    "datetime": "2018-01-11",
+    "id": "colours"
+  },
+  {
+    "title": "We add the task list pattern",
+    "datetime": "2018-01-12",
+    "id": "task-list"
+  },
+  {
+    "title": "We add the start page pattern",
+    "datetime": "2018-01-25",
+    "id": "start-page"
+  },
+  {
+    "title": "We add the gender and sex pattern",
+    "datetime": "2018-01-29",
+    "id": "gender-sex"
+  },
+  {
+    "title": "We remove the gender and sex pattern",
+    "datetime": "2018-03-15",
+    "id": "remove-gender-sex"
+  },
+  {
+    "title": "We add the page not found pattern",
+    "datetime": "2018-03-31",
+    "id": "page-not-found"
+  },
+  {
+    "title": "We add exampels of error messages",
+    "datetime": "2018-09-11",
+    "id": "error-examples"
   },
   {
     "title": "We released GOV.UK Frontend version 1.0.0",
