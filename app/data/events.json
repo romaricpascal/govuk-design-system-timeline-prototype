@@ -131,6 +131,42 @@
     "id": "3.0.0",
     "events": [
       {
+        "title": "Launched GOV.UK Frontend 3.14.0",
+        "datetime": "2021-10-04"
+      },
+      {
+        "title": "Launched GOV.UK Frontend 3.13.1",
+        "datetime": "2021-10-04"
+      },
+      {
+        "title": "Launched GOV.UK Frontend 3.13.0",
+        "datetime": "2021-06-24"
+      },
+      {
+        "title": "Checkboxes component updated",
+        "datetime": "2021-06-24"
+      },
+      {
+        "title": "Launched GOV.UK Frontend 3.12.0",
+        "datetime": "2021-05-13"
+      },
+      {
+        "title": "Hover states and link styles updated",
+        "datetime": "2021-05-13"
+      },
+      {
+        "title": "Equality information pattern",
+        "datetime": "2021-03-26"
+      },
+      {
+        "title": "Launched GOV.UK Frontend 3.11.0",
+        "datetime": "2021-02-08"
+      },
+      {
+        "title": "Launched GOV.UK Frontend 3.11.0",
+        "datetime": "2021-02-08"
+      },
+      {
         "title": "Added input prefixes and suffixes",
         "datetime": "2020-09-14"
       }
