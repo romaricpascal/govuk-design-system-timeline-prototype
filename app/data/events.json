@@ -69,7 +69,6 @@
     "id": "remove-gender-sex"
   },
   {
-<<<<<<< HEAD
     "title": "We added the page not found pattern",
     "datetime": "2018-03-31",
     "id": "page-not-found"
@@ -77,15 +76,6 @@
   {
     "title": "We added examples of error messages",
     "datetime": "2018-09-11",
-=======
-    "title": "We add the page not found pattern",
-    "datetime": "2018-05-31",
-    "id": "page-not-found"
-  },
-  {
-    "title": "We add examples of error messages",
-    "datetime": "2018-05-31",
->>>>>>> 48edf956283e50d67d341a20f45d66a87e183d49
     "id": "error-examples"
   },
   {
@@ -211,6 +201,14 @@
       {
         "title": "We updated the Header component",
         "datetime": "2020-09-22"
+      },
+      {
+        "title": "We released GOV.UK Frontend version 3.9.0",
+        "datetime": "2020-09-14"
+      },
+      {
+        "title": "We released GOV.UK Frontend version 3.8.1",
+        "datetime": "2020-08-13"
       }
     ]
   },
