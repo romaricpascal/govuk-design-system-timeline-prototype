@@ -66,7 +66,8 @@ $hmrc-timeline-padding-bottom: 30px;
     --app-timeline-event-border-style: dashed;
 }
 
-.app-service-phase-events {
+.app-service-phase-events-wrapper {
+    padding-inline: 1rem;
     --background-color: transparent;
     --text-color: govuk-color(black);
     --border-color: var(--text-color);
@@ -94,7 +95,7 @@ $hmrc-timeline-padding-bottom: 30px;
 }
 
 [data-service-phase-title="Alpha"] {
-    --background-color: #e4e8ff;
+    --background-color: #f0f2ff;
     --text-color: #442ca9;
     --link-color: var(--text-color);
 }

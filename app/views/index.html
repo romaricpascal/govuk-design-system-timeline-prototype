@@ -43,6 +43,7 @@
     <div class="app-filter-toggle-wrapper"></div>
 
     {% for serviceEvent in serviceEvents %}
+      <div class="app-service-phase-events-wrapper" data-service-phase-title="{{serviceEvent.title}}">
         <section class="app-service-phase-events" data-service-phase-title="{{serviceEvent.title}}">
           <div class="hmrc-timeline__event">
             <h2 class="hmrc-timeline__event-title">{{serviceEvent.title}}</h2>
@@ -53,6 +54,7 @@
             events: serviceEvent.events | sort(false, false, 'datetime')
           })}}
         </section>
+      </div>
       {% endfor %}
   </div>
 </div>
