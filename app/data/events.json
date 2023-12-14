@@ -5,76 +5,76 @@
     "id": "0.0.0",
     "events": [
       {
-        "title": "Footer component",
+        "title": "We added the Footer component",
         "datetime": "2018-03-08"
       },
       {
-        "title": "Header component",
+        "title": "We added the Header component",
         "datetime": "2018-05-29"
       },
       {
-        "title": "Details component",
+        "title": "We added the Details component",
         "datetime": "2018-07-17"
       },
       {
-        "title": "Error component",
+        "title": "We added the Error component",
         "datetime": "2018-03-08"
       },
       {
-        "title": "Warning text component",
+        "title": "We added the Warning text component",
         "datetime": "2018-06-14"
       },
       {
-        "title": "Table component",
+        "title": "We added the Table component",
         "datetime": "2018-04-12"
       },
       {
-        "title": "Conditional reveal functionality added to checkboxes and radios",
+        "title": "We added conditional reveal functionality added to checkboxes and radios",
         "datetime": "2018-05-18"
       },
       {
-        "title": "Inset text component",
+        "title": "We added the  Inset text component",
         "datetime": "2018-05-29"
       }
     ]
   },
   {
-    "title": "We add the layout page",
+    "title": "We added the layout page",
     "datetime": "2018-01-09",
     "id": "layout"
   },
   {
-    "title": "We add the colours page",
+    "title": "We added the colours page",
     "datetime": "2018-01-11",
     "id": "colours"
   },
   {
-    "title": "We add the task list pattern",
+    "title": "We added the task list pattern",
     "datetime": "2018-01-12",
     "id": "task-list"
   },
   {
-    "title": "We add the start page pattern",
+    "title": "We added the start page pattern",
     "datetime": "2018-01-25",
     "id": "start-page"
   },
   {
-    "title": "We add the gender and sex pattern",
+    "title": "We added the gender and sex pattern",
     "datetime": "2018-01-29",
     "id": "gender-sex"
   },
   {
-    "title": "We remove the gender and sex pattern",
+    "title": "We removed the gender and sex pattern",
     "datetime": "2018-03-15",
     "id": "remove-gender-sex"
   },
   {
-    "title": "We add the page not found pattern",
+    "title": "We added the page not found pattern",
     "datetime": "2018-03-31",
     "id": "page-not-found"
   },
   {
-    "title": "We add exampels of error messages",
+    "title": "We added examples of error messages",
     "datetime": "2018-09-11",
     "id": "error-examples"
   },
@@ -84,7 +84,7 @@
     "id": "1.0.0",
     "events": [
       {
-        "title": "tabs component",
+        "title": "We added the Tabs component",
         "datetime": "2018-06-21"
       }
     ]
@@ -95,7 +95,7 @@
     "id": "2.0.0",
     "events": [
       {
-        "title": "Accordion component",
+        "title": "We added the Accordion component",
         "datetime": "2019-01-10"
       }
     ]
@@ -106,23 +106,23 @@
     "id": "3.0.0",
     "events": [
       {
-        "title": "Launched GOV.UK Frontend 3.14.0",
+        "title": "We released GOV.UK Frontend version 3.14.0",
         "datetime": "2021-10-04"
       },
       {
-        "title": "Launched GOV.UK Frontend 3.13.1",
+        "title": "We released GOV.UK Frontend version 3.13.1",
         "datetime": "2021-10-04"
       },
       {
-        "title": "Launched GOV.UK Frontend 3.13.0",
+        "title": "We released GOV.UK Frontend version 3.13.0",
         "datetime": "2021-06-24"
       },
       {
-        "title": "Checkboxes component updated",
+        "title": "We updated the Checkboxes component",
         "datetime": "2021-06-24"
       },
       {
-        "title": "Launched GOV.UK Frontend 3.12.0",
+        "title": "We released GOV.UK Frontend version 3.12.0",
         "datetime": "2021-05-13"
       },
       {
@@ -134,16 +134,48 @@
         "datetime": "2021-03-26"
       },
       {
-        "title": "Launched GOV.UK Frontend 3.11.0",
+        "title": "We released GOV.UK Frontend version 3.11.0",
         "datetime": "2021-02-08"
       },
       {
-        "title": "Launched GOV.UK Frontend 3.11.0",
+        "title": "We released GOV.UK Frontend version 3.11.0",
         "datetime": "2021-02-08"
       },
       {
         "title": "Added input prefixes and suffixes",
         "datetime": "2020-09-14"
+      },
+      {
+        "title": "We added the Cookie banner component",
+        "datetime": "2020-09-14"
+      },
+      {
+        "title": "We updated the Button component",
+        "datetime": "2020-09-14"
+      },
+      {
+        "title": "We released GOV.UK Frontend version 3.10.2",
+        "datetime": "2020-12-17"
+      },
+      {
+        "title": "We released GOV.UK Frontend version 3.10.1",
+        "datetime": "2020-12-01"
+      }, 
+      {
+        "title": "We released GOV.UK Frontend version 3.10.0",
+        "datetime": "2020-11-23"
+      },
+      {
+        "title": "Notification banner component",
+        "datetime": "2020-11-23"
+      }, 
+      {
+        "title": "We released GOV.UK Frontend version 3.9.1",
+        "datetime": "2020-09-22"
+      },
+      {
+        "title": "We updated the Header component",
+        "datetime": "2020-09-22"
       }
     ]
   },
@@ -153,75 +185,75 @@
     "id": "4.0.0",
     "events": [
       {
-        "title": "Exit This Page component",
+        "title": "We added the Exit This Page component",
         "datetime": "2023-07-06"
       },
       {
-        "title": "Launched GOV.UK Frontend 4.7.0",
+        "title": "We released GOV.UK Frontend version 4.7.0",
         "datetime": "2023-07-06"
       },
       {
-        "title": "Launched GOV.UK Frontend 4.6.0",
+        "title": "We released GOV.UK Frontend version 4.6.0",
         "datetime": "2023-04-20"
       },
       {
-        "title": "Launched GOV.UK Frontend 4.5.0",
+        "title": "We released GOV.UK Frontend version 4.5.0",
         "datetime": "2023-01-31"
       },
       {
-        "title": "Summary card component",
+        "title": "We added the Summary card component",
         "datetime": "2023-01-31"
       },
       {
-        "title": "Launched GOV.UK Frontend 4.4.1",
+        "title": "We released GOV.UK Frontend version 4.4.1",
         "datetime": "2022-12-16"
       },
       {
-        "title": "Launched GOV.UK Frontend 4.4.0",
+        "title": "We released GOV.UK Frontend version 4.4.0",
         "datetime": "2022-11-14"
       },
       {
-        "title": "Internationalisation",
+        "title": "We added Internationalisation to our codebase",
         "datetime": "2022-11-14"
       },
       {
-        "title": "Launched GOV.UK Frontend 4.3.1",
+        "title": "We released GOV.UK Frontend version 4.3.1",
         "datetime": "2022-08-18"
       },
       {
-        "title": "Launched GOV.UK Frontend 4.3.0",
+        "title": "We released GOV.UK Frontend version 4.3.0",
         "datetime": "2022-08-09"
       },
       {
-        "title": "Launched GOV.UK Frontend 4.2.0",
+        "title": "We released GOV.UK Frontend version 4.2.0",
         "datetime": "2022-06-27"
       },
       {
-        "title": "Pagination component",
+        "title": "We added the Pagination component",
         "datetime": "2022-06-27"
       },
       {
-        "title": "Launched GOV.UK Frontend 4.1.0",
+        "title": "We released GOV.UK Frontend version 4.1.0",
         "datetime": "2022-05-01"
       },
       {
-        "title": "Character count component updated",
+        "title": "We updated the Character count component",
         "datetime": "2022-05-01"
       },
       {
-        "title": "Addresses pattern updated",
+        "title": "We updated the Addresses pattern",
         "datetime": "2022-04-28"
       },
       {
-        "title": "Help users to confirm a phone number pattern",
+        "title": "We added the Help users to confirm a phone number pattern",
         "datetime": "2022-03-31"
       },
       {
-        "title": "Launched GOV.UK Frontend 4.0.1",
+        "title": "We released GOV.UK Frontend version 4.0.1",
         "datetime": "2022-02-08"
       },
       {
-        "title": "Accordion component updated",
+        "title": "We updated the Accordion component",
         "datetime": "2022-02-08"
       }
     ]
@@ -239,15 +271,15 @@
     "id": "5.0.0",
     "events": [
       {
-        "title": "Task list component",
+        "title": "We added the Task list component",
         "datetime": "2023-12-08"
       },
       {
-        "title": "Tag component updated",
+        "title": "We updated the Tag component",
         "datetime": "2023-12-08"
       },
       {
-        "title": "Removed support for IE 11 and other older browsers running unsupported JavaScript",
+        "title": "We removed support for IE 11 and other older browsers running unsupported JavaScript",
         "datetime": "2023-12-08"
       }
     ]
