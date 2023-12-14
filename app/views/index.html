@@ -42,35 +42,18 @@
 
     <div class="app-filter-toggle-wrapper"></div>
 
-    <style>
-      /* Generate grid areas for each service phase to help positioning
-         according to the number of events they contain.
-         This allows to have named lines for the start and end of each area
-         which will simplify the assignment of `grid-row-start` and `grid-row-end` later */
-      .app-main-timeline .hmrc-timeline {
-        grid-template-areas: {% for servicePhaseTitle, eventsCount in eventsPerPhases %}
-          "{{servicePhaseTitle}}-heading {{servicePhaseTitle}}-heading"
-          {% for i in range(0, eventsCount) %}
-            "{{servicePhaseTitle}} {{servicePhaseTitle}}"
-          {% endfor %}
-        {% endfor %};
-      }
-
-      {% for servicePhaseTitle, eventsCount in eventsPerPhases %}
-        .app-phase-branch[data-service-phase-title="{{servicePhaseTitle}}"] {
-          grid-row-start: {{servicePhaseTitle}}-start;
-          grid-row-end: {{servicePhaseTitle}}-end;
-          border-bottom: var(--app-timeline-event-border-style) 5px;
-        }
+    {% for serviceEvent in serviceEvents %}
+        <section class="app-service-phase-events" data-service-phase-title="{{serviceEvent.title}}">
+          <div class="hmrc-timeline__event">
+            <h2 class="hmrc-timeline__event-title">{{serviceEvent.title}}</h2>
+            <time class="hmrc-timeline__event-meta" datetime="{{serviceEvent.datetime}}">{{serviceEvent.time}}</time>
+          </div>
+          {{appTimeline({
+            headingLevel: "3",
+            events: serviceEvent.events | sort(false, false, 'datetime')
+          })}}
+        </section>
       {% endfor %}
-    </style>
-
-    <div class="app-main-timeline">
-      {{ appTimeline({
-        headingLevel: "2",
-        events: allEvents | rejectattr('parent') | sort(false, false, 'datetime')
-      }) }}
-    </div>
   </div>
 </div>
 

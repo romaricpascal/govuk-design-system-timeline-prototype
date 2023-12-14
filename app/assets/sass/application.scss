@@ -21,57 +21,47 @@
     background-color: govuk-colour('black');
 }
 
-.app-main-timeline {
-    .hmrc-timeline {
-        display: grid;
-        grid-template-columns: auto 2fr;
-        list-style-type: none;
-    }
+.app-service-phase-events {
+    border-left: var(--app-timeline-event-border-style, solid) 5px;
+    position: relative;
+}
 
-    .hmrc-timeline__event {
-        border-left: var(--app-timeline-event-border-style, solid) 5px;
-    }
+$hmrc-timeline-margin-left: 50px;
+$hmrc-timeline-padding-bottom: 30px;
 
-    .app-phase {
-        grid-column: 1;
-        padding-block: 30px;
-    }
+.app-service-phase-events .hmrc-timeline {
+    position: relative;
+    margin-bottom: 0;
+    margin-left: $hmrc-timeline-margin-left;
+    padding-bottom: $hmrc-timeline-padding-bottom;
+}
 
-    .app-phase h2 {
-        position: relative;
-    }
+.app-service-phase-events .hmrc-timeline::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: $hmrc-timeline-padding-bottom;
+    right: 100%;
+    width: $hmrc-timeline-margin-left;
+    border: var(--app-timeline-event-border-style, solid) 5px;
+    border-left: transparent;
+}
 
-    .app-phase h2::before {
-        left: -15px;
-    }
+.app-service-phase-events .hmrc-timeline__event {
+    border: 0;
+}
 
-    .app-phase time {
-        margin-bottom: 0;
+[data-service-phase-title="Alpha"] {
+    --app-timeline-event-border-style: dotted;
+    
+    .hmrc-timeline__event-title::before {
+        width: 5px;
+        margin-left: 2px;
+        border-radius: 100%;
     }
+}
 
-    .app-phase:first-child {
-        padding-top: 0;
-    }
-
-    .app-phase-placeholder {
-        grid-column: 2;
-    }
-
-    .app-phase-branch {
-        grid-column: 1;
-        border: var(--app-timeline-event-border-style, solid) 5px;
-    }
-
-    .app-event {
-        grid-column: 2;
-        border-left: 0;
-    }
-
-    [data-service-phase-title="Alpha"] {
-        --app-timeline-event-border-style: dotted;
-    }
-
-    [data-service-phase-title="Beta"] {
-        --app-timeline-event-border-style: dashed;
-    }
+[data-service-phase-title="Beta"] {
+    --app-timeline-event-border-style: dashed;
 }
