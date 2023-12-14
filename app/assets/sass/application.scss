@@ -65,3 +65,48 @@ $hmrc-timeline-padding-bottom: 30px;
 [data-service-phase-title="Beta"] {
     --app-timeline-event-border-style: dashed;
 }
+
+.app-service-phase-events {
+    --background-color: transparent;
+    --text-color: govuk-color(black);
+    --border-color: var(--text-color);
+
+    background-color: var(--background-color);
+
+    &,
+    time,
+    h2 {
+        color: var(--text-color);
+    }
+    
+    a,
+    a:visited {
+        color: var(--link-color);
+    }
+
+    .hmrc-timeline__event-title:before {
+        background-color: var(--border-color);
+    }
+
+    * {
+        border-color: var(--border-color);
+    }
+}
+
+[data-service-phase-title="Alpha"] {
+    --background-color: #e4e8ff;
+    --text-color: #442ca9;
+    --link-color: var(--text-color);
+}
+
+[data-service-phase-title="Beta"] {
+    --background-color: #cffafd;
+    --text-color: #155e73;
+    --link-color: var(--text-color);
+}
+
+[data-service-phase-title="Live"] {
+    --background-color: #d7fbe6;
+    --text-color: #11623c;
+    --link-color: var(--text-color);
+}
