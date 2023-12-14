@@ -69,6 +69,7 @@
     "id": "remove-gender-sex"
   },
   {
+<<<<<<< HEAD
     "title": "We added the page not found pattern",
     "datetime": "2018-03-31",
     "id": "page-not-found"
@@ -76,6 +77,15 @@
   {
     "title": "We added examples of error messages",
     "datetime": "2018-09-11",
+=======
+    "title": "We add the page not found pattern",
+    "datetime": "2018-05-31",
+    "id": "page-not-found"
+  },
+  {
+    "title": "We add examples of error messages",
+    "datetime": "2018-05-31",
+>>>>>>> 48edf956283e50d67d341a20f45d66a87e183d49
     "id": "error-examples"
   },
   {
@@ -88,6 +98,31 @@
         "datetime": "2018-06-21"
       }
     ]
+  },
+  {
+    "title": "The Prototype Kit starts using GOV.UK Frontend",
+    "datetime": "2018-06-22",
+    "id": "prototype-kit-user"
+  },
+  {
+    "title": "We add the service unavailable pattern",
+    "datetime": "2018-06-12",
+    "id": "service-unavailable"
+  },
+  {
+    "title": "We add the telephone numbers pattern",
+    "datetime": "2018-06-13",
+    "id": "telephone"
+  },
+  {
+    "title": "We add the page template page",
+    "datetime": "2018-06-21",
+    "id": "template"
+  },
+  {
+    "title": "We add the community section to the website",
+    "datetime": "2018-06-14",
+    "id": "community"
   },
   {
     "title": "We released GOV.UK Frontend version 2.0.0",

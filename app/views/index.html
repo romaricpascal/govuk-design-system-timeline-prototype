@@ -42,12 +42,18 @@
 
     <div class="app-filter-toggle-wrapper"></div>
 
-    <div class="app-main-timeline">
-      {{ appTimeline({
-        headingLevel: "2",
-        events: allEvents | rejectattr('parent') | sort(false, false, 'datetime')
-      }) }}
-    </div>
+    {% for serviceEvent in serviceEvents %}
+        <section class="app-service-phase-events" data-service-phase-title="{{serviceEvent.title}}">
+          <div class="hmrc-timeline__event">
+            <h2 class="hmrc-timeline__event-title">{{serviceEvent.title}}</h2>
+            <time class="hmrc-timeline__event-meta" datetime="{{serviceEvent.datetime}}">{{serviceEvent.time}}</time>
+          </div>
+          {{appTimeline({
+            headingLevel: "3",
+            events: serviceEvent.events | sort(false, false, 'datetime')
+          })}}
+        </section>
+      {% endfor %}
   </div>
 </div>
 

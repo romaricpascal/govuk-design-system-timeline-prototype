@@ -1,4 +1,5 @@
 const {DATE_FORMAT} = require('./util/date.js');
+const {index} = require('./util/array.js');
 
 module.exports = {
   /**
@@ -58,30 +59,6 @@ module.exports = {
       releasesByVersion
     }
   }
-}
-
-/**
- * Indexes objects of the given list according to the given property
- * @template {Object} Item
- * @param {Item[]} list 
- * @param {{by: string}} options
- * @returns {{string: Item[]}} An object whose keys are the unique values for the given property, and values arrays of each of the items for which property has that specific value
- */
-function index(list, {by:property}) {
-  const index = {};
-
-  list.forEach(item => {
-
-    const value = item[property];
-
-    if (!index[value]) {
-      index[value] = []
-    }
-
-    index[value].push(item)
-  })
-  
-  return index;
 }
 
 /**
