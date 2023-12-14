@@ -1,7 +1,7 @@
 {% if params.events | length !== 0 %}
   <ol class="hmrc-timeline">
     {% for event in params.events -%}
-      <li class="hmrc-timeline__event {{ event.classes if event.classes }}">
+      <li class="hmrc-timeline__event {{ event.classes if event.classes }}" data-service-phase-title="{{event.servicePhase.title or event.title}}">
         <{% if params.headingLevel %}h{{- params.headingLevel | string | trim -}}{% else %}h2{% endif %} class="hmrc-timeline__event-title">
           {% if event.url %}
             <a href="{{event.url}}">{{event.title}}</a>
@@ -15,7 +15,10 @@
         </div>
       </li>
       {% if (event.type == 'phase') %}
-        <li role="presentation" class="app-phase-placeholder"></li>
+        <li role="presentation" class="app-phase-placeholder" ></li>
+        <li role="presentation" class="app-phase-branch" 
+          style="--app-service-phase-title: {{event.title}}"
+          data-service-phase-title="{{event.title}}"></li>
       {% endif %}
     {%- endfor %}
   </ol>

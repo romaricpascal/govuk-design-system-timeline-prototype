@@ -24,7 +24,18 @@ module.exports = {
       }
     })
 
+    const eventsPerPhases = {};
+    // Sort the service phases to help bucket the events
+    servicePhases.sort(ascending('datetime'));
+    // Bucket the events in each service event
+    for(const event of generalEvents) {
+      const servicePhaseOfEvent = getServicePhase(event, servicePhases);
+      event.servicePhase = servicePhaseOfEvent;
+      eventsPerPhases[servicePhaseOfEvent.title] = (eventsPerPhases[servicePhaseOfEvent.title] ?? 0) + 1;
+    }
+
     return {
+      eventsPerPhases,
       events: [...serviceEvents, ...generalEvents]
     }
   }

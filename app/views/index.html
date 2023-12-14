@@ -42,6 +42,29 @@
 
     <div class="app-filter-toggle-wrapper"></div>
 
+    <style>
+      /* Generate grid areas for each service phase to help positioning
+         according to the number of events they contain.
+         This allows to have named lines for the start and end of each area
+         which will simplify the assignment of `grid-row-start` and `grid-row-end` later */
+      .app-main-timeline .hmrc-timeline {
+        grid-template-areas: {% for servicePhaseTitle, eventsCount in eventsPerPhases %}
+          "{{servicePhaseTitle}}-heading {{servicePhaseTitle}}-heading"
+          {% for i in range(0, eventsCount) %}
+            "{{servicePhaseTitle}} {{servicePhaseTitle}}"
+          {% endfor %}
+        {% endfor %};
+      }
+
+      {% for servicePhaseTitle, eventsCount in eventsPerPhases %}
+        .app-phase-branch[data-service-phase-title="{{servicePhaseTitle}}"] {
+          grid-row-start: {{servicePhaseTitle}}-start;
+          grid-row-end: {{servicePhaseTitle}}-end;
+          border-bottom: var(--app-timeline-event-border-style) 5px;
+        }
+      {% endfor %}
+    </style>
+
     <div class="app-main-timeline">
       {{ appTimeline({
         headingLevel: "2",
